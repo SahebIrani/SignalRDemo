@@ -1,0 +1,6 @@
+﻿@aspnet/signalr@next
+unpkg
+wwwroot/lib/signalr/
+
+npm init -y
+"private": true,
