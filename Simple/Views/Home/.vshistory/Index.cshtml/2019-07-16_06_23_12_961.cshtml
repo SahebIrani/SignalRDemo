@@ -1,0 +1,155 @@
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+	</thead>
+	<tbody id="tableBody">
+	</tbody>
+</table>
+
+<span class="btn btn-outline-success" onclick="loadData();" style="cursor:pointer;">Go</span>
+<span class="btn btn-outline-success" id="sendButton" onclick="loadData();" style="cursor:pointer;">Go New</span>
+<a class="btn btn-link" asp-controller="Home" asp-action="ReciveMethod">Go To ReciveMethod</a>
+
+@section Scripts{
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+	@*
+<script src="~/js/chat.js"></script>*@
+
+<script>
+
+	"use strict";
+
+	var connection = new signalR.HubConnectionBuilder().withUrl("/signalServer").build();
+
+	let btnSend = document.getElementById("sendButton");
+
+	//Disable send button until connection is established
+	btnSend.disabled = true;
+
+	connection.start().then(function () {
+		btnSend.disabled = false;
+	}).catch(function (err) {
+		return console.error(err.toString());
+	});
+
+	btnSend.addEventListener("click", send);
+
+	function send(event) {
+
+		const name = "SinjulMSBH";
+		const age = 26;
+
+		connection.send("NotifyMessage", name, age)
+			.then(function (message) {
+				return alert(message);;
+			});
+
+		connection.invoke("NotifyMessage", name, age)
+			.catch(function (err) {
+				return console.error(err.toString());
+			});
+
+		event.preventDefault();
+	}
+
+	//$(() => {
+
+	//connection.start();
+
+
+
+	connection.on("ReciveEmployrrFromController", function (str) {
+		alert(str);
+	});
+
+	connection.on("ReciveNotifyFromController", function (str) {
+		alert(str);
+	});
+
+	connection.on("RefreshEmployees", function () {
+		loadData();
+	});
+
+	connection.on("ReciveNotify", function (name,age) {
+		alert(name + age);
+	});
+
+	//loadData();
+
+	function loadData() {
+
+		$("#tableBody").html(" ");
+
+		alert("OK");
+
+		var tr = '';
+
+		$.ajax({
+			url: '/Home/GetEmployees',
+			method: 'GET',
+			success: (result) => {
+				$.each(result, (k, v) => {
+					tr = tr +
+						`<tr>
+										<td>${v.id}</td>
+										<td>${v.name}</td>
+										<td>${v.age}</td>
+									</tr>`
+						;
+				});
+
+				$("#tableBody").html(tr);
+			},
+			error: (error) => {
+				console.log(error);
+			}
+		});
+	}
+
+		//});
+
+</script>
+}
+
+<div class="container">
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-2">User</div>
+		<div class="col-4"><input type="text" id="userInput" /></div>
+	</div>
+	<div class="row">
+		<div class="col-2">Message</div>
+		<div class="col-4"><input type="text" id="messageInput" /></div>
+	</div>
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-6">
+			<input type="button" id="sendButton" value="Send Message" />
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<hr />
+	</div>
+</div>
+<div class="row">
+	<div class="col-6">
+		<ul id="messagesList"></ul>
+	</div>
+</div>

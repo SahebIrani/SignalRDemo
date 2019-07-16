@@ -1,0 +1,27 @@
+@model Simple.Data.DataRealTime
+
+@{
+	ViewData["Title"] = "Create LiveData";
+}
+
+<div class="container" dir="rtl">
+	<div class="row">
+		<div class="card text-center col-6">
+			<div class="card-header"><h1> ورود اطلاعات </h1></div>
+			<div class="card-body">
+				<form asp-controller="LiveData" asp-route-id="@(Model?.Id)" asp-action="Create" method="post">
+					<div class="form-group">
+						<input class="form-control" asp-for="Title" placeholder="عنوان را وارد نمایید" />
+					</div>
+					<div class="form-group">
+						<input class="form-control" asp-for="Price" placeholder="قیمت را وارد نمایید" />
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-outline-success" name="name" value="اعمال" />
+					</div>
+				</form>
+			</div>
+			<div class="card-footer"><h1> کاری از سینجول </h1></div>
+		</div>
+	</div>
+</div>

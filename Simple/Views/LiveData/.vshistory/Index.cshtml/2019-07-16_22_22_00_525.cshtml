@@ -1,0 +1,61 @@
+@model IEnumerable<Simple.Data.DataRealTime>
+@{
+	ViewData["Title"] = "List LiveData";
+}
+
+<div class="container" dir="rtl">
+	<div class="row">
+		<div class="card text-center mx-auto">
+			<div class="card-header"><h1> قیمت زنده طلا ، دلار ، سکه و .. </h1></div>
+			<div class="card-body">
+				<div class="d-flex flex-wrap justify-content-center align-items-center align-content-center my-2">
+					@*<ul class="col my-1 list-group pr-0 mx-2">
+							<li class="list-group-item list-group-item-action list-group-item-primary"> سکه </li>
+							<li class="list-group-item list-group-item-action list-group-item-success"> 40,100,000 </li>
+						</ul>*@
+					@foreach (var dataRealTime in Model)
+					{
+						<ul class="col my-1 list-group pr-0 mx-2" id="item@(dataRealTime.Id)">
+							<li class="list-group-item list-group-item-action list-group-item-primary">
+								<span id="title@(dataRealTime.Id)">@dataRealTime.Title</span>
+							</li>
+							<li class="list-group-item list-group-item-action list-group-item-success">
+								<span id="price@(dataRealTime.Id)">@dataRealTime.Price.ToString("0,##")</span>
+							</li>
+							<li class="list-group-item list-group-item-action list-group-item-success">
+								<a class="btn btn-link" asp-controller="LiveData" asp-action="Create" asp-route-id="@dataRealTime.Id">ویرایش</a>
+							</li>
+						</ul>
+					}
+				</div>
+			</div>
+			<div class="card-footer"><h1> کاری از سینجول </h1></div>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+
+	<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+
+
+	<script>
+
+		"use strict";
+
+		var connection = new signalR.HubConnectionBuilder().withUrl("/liveDataHub").build();
+
+		connection.start().then(function () {
+			btnSend.disabled = false;
+		}).catch(function (err) {
+			return console.error(err.toString());
+		});
+
+		connection.on("ReciveLiveDataFromController", function (id , title , price) {
+			console.log(id + title + price);
+
+			console.log(price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
+		});
+
+	</script>
+}

@@ -1,0 +1,30 @@
+
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+	</thead>
+	<tbody id="tableBody">
+	</tbody>
+</table>
+
+<span class="btn btn-outline-success" onclick="loadData();" style="cursor:pointer;">Go</span>
+<span class="btn btn-outline-success" id="sendButton" onclick="loadData();" style="cursor:pointer;">Go New</span>
+<a class="btn btn-link" asp-controller="Home" asp-action="ReciveMethod">Go To ReciveMethod</a>
+<a class="btn btn-link" id="sendEmpButton" style="cursor:pointer;">Go To ReciveEmployee</a>
+
+@section Scripts{
+
+	<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+
+ }

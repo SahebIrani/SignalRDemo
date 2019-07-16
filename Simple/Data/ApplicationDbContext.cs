@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+
+using Simple.Hubs;
 
 namespace Simple.Data
 {
@@ -12,5 +11,7 @@ namespace Simple.Data
 			: base(options)
 		{
 		}
+
+		public DbSet<Employee> Employees { get; set; }
 	}
 }

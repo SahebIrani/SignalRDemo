@@ -1,0 +1,15 @@
+{
+	"ConnectionStrings": {
+		"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=employeeDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+	},
+  "Logging": {
+	"LogLevel": {
+		"Default": "Information",
+		"Microsoft": "Warning",
+		"Microsoft.Hosting.Lifetime": "Information",
+		"Microsoft.AspNetCore.SignalR": "Debug",
+		"Microsoft.AspNetCore.Http.Connections": "Debug"
+	}
+  },
+  "AllowedHosts": "*"
+}

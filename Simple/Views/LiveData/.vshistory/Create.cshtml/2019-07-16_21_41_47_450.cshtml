@@ -1,0 +1,20 @@
+@model Simple.Data.DataRealTime
+
+@{
+	ViewData["Title"] = "Create LiveData";
+}
+
+<div class="container" dir="rtl">
+	<div class="row">
+		<div class="card text-center">
+			<div class="card-header"><h1> قیمت زنده طلا ، دلار ، سکه و .. </h1></div>
+			<div class="card-body">
+				<form asp-controller="LiveData" asp-action="Create" method="post">
+
+					<input type="submit" class="btn btn-outline-success" name="name" value="اعمال" />
+				</form>
+			</div>
+			<div class="card-footer"><h1> کاری از سینجول </h1></div>
+		</div>
+	</div>
+</div>

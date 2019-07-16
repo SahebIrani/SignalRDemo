@@ -1,0 +1,850 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>aspnet-Simple-50974468-1FE4-4702-9716-FCB7D8E0E96E</UserSecretsId>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\js\.vshistory\**" />
+    <Content Remove="wwwroot\js\.vshistory\**" />
+    <EmbeddedResource Remove="wwwroot\js\.vshistory\**" />
+    <None Remove="wwwroot\js\.vshistory\**" />
+    <TypeScriptCompile Remove="wwwroot\js\.vshistory\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\signalrChat.js" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\AbortController.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\browser-index.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\DefaultHttpClient.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\DefaultReconnectPolicy.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\EmptyNodeHttpClient.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\Errors.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\HandshakeProtocol.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\HttpClient.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\HttpConnection.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\HubConnection.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\HubConnectionBuilder.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\IConnection.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\IHttpConnectionOptions.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\IHubProtocol.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\ILogger.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\index.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\IReconnectPolicy.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\ITransport.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\JsonHubProtocol.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\Loggers.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\LongPollingTransport.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\NodeHttpClient.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\Polyfills.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\ServerSentEventsTransport.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\Stream.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\Subject.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\TextMessageFormat.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\Utils.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\WebSocketTransport.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\dist\esm\XhrHttpClient.d.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\AbortController.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\browser-index.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\DefaultHttpClient.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\DefaultReconnectPolicy.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\EmptyNodeHttpClient.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\Errors.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\HandshakeProtocol.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\HttpClient.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\HttpConnection.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\HubConnection.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\HubConnectionBuilder.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\IConnection.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\IHttpConnectionOptions.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\IHubProtocol.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\ILogger.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\index.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\IReconnectPolicy.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\ITransport.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\JsonHubProtocol.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\Loggers.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\LongPollingTransport.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\NodeHttpClient.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\Polyfills.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\ServerSentEventsTransport.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\Stream.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\Subject.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\TextMessageFormat.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\Utils.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\WebSocketTransport.ts" />
+    <Content Remove="wwwroot\lib\signalr\src\XhrHttpClient.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="wwwroot-save\css\site.css" />
+    <None Remove="wwwroot-save\favicon.ico" />
+    <None Remove="wwwroot-save\js\chat.js" />
+    <None Remove="wwwroot-save\js\site.js" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap.css" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Remove="wwwroot-save\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Remove="wwwroot-save\lib\bootstrap\LICENSE" />
+    <None Remove="wwwroot-save\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Remove="wwwroot-save\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Remove="wwwroot-save\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <None Remove="wwwroot-save\lib\jquery-validation\dist\additional-methods.js" />
+    <None Remove="wwwroot-save\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Remove="wwwroot-save\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Remove="wwwroot-save\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Remove="wwwroot-save\lib\jquery-validation\LICENSE.md" />
+    <None Remove="wwwroot-save\lib\jquery\dist\jquery.js" />
+    <None Remove="wwwroot-save\lib\jquery\dist\jquery.min.js" />
+    <None Remove="wwwroot-save\lib\jquery\dist\jquery.min.map" />
+    <None Remove="wwwroot-save\lib\jquery\LICENSE.txt" />
+    <None Remove="wwwroot-save\lib\signalr\dist\browser\signalr.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\browser\signalr.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\browser\signalr.min.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\browser\signalr.min.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\AbortController.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\AbortController.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\browser-index.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\browser-index.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\DefaultHttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\DefaultHttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\DefaultReconnectPolicy.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\DefaultReconnectPolicy.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\EmptyNodeHttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\EmptyNodeHttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Errors.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Errors.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HandshakeProtocol.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HandshakeProtocol.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HttpConnection.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HttpConnection.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HubConnection.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HubConnection.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HubConnectionBuilder.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\HubConnectionBuilder.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\IConnection.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\IConnection.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\IHttpConnectionOptions.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\IHttpConnectionOptions.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\IHubProtocol.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\IHubProtocol.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\ILogger.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\ILogger.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\index.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\index.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\IReconnectPolicy.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\IReconnectPolicy.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\ITransport.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\ITransport.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\JsonHubProtocol.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\JsonHubProtocol.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Loggers.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Loggers.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\LongPollingTransport.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\LongPollingTransport.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\NodeHttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\NodeHttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Polyfills.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Polyfills.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\ServerSentEventsTransport.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\ServerSentEventsTransport.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Stream.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Stream.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Subject.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Subject.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\TextMessageFormat.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\TextMessageFormat.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Utils.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\Utils.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\WebSocketTransport.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\WebSocketTransport.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\XhrHttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\cjs\XhrHttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\AbortController.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\AbortController.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\AbortController.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\browser-index.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\browser-index.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\browser-index.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\DefaultHttpClient.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\DefaultHttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\DefaultHttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\DefaultReconnectPolicy.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\DefaultReconnectPolicy.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\DefaultReconnectPolicy.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\EmptyNodeHttpClient.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\EmptyNodeHttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\EmptyNodeHttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Errors.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Errors.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Errors.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HandshakeProtocol.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HandshakeProtocol.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HandshakeProtocol.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HttpClient.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HttpConnection.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HttpConnection.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HttpConnection.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HubConnection.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HubConnection.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HubConnection.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HubConnectionBuilder.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HubConnectionBuilder.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\HubConnectionBuilder.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IConnection.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IConnection.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IConnection.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IHttpConnectionOptions.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IHttpConnectionOptions.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IHttpConnectionOptions.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IHubProtocol.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IHubProtocol.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IHubProtocol.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ILogger.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ILogger.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ILogger.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\index.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\index.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\index.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IReconnectPolicy.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IReconnectPolicy.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\IReconnectPolicy.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ITransport.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ITransport.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ITransport.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\JsonHubProtocol.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\JsonHubProtocol.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\JsonHubProtocol.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Loggers.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Loggers.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Loggers.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\LongPollingTransport.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\LongPollingTransport.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\LongPollingTransport.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\NodeHttpClient.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\NodeHttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\NodeHttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Polyfills.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Polyfills.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Polyfills.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ServerSentEventsTransport.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ServerSentEventsTransport.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\ServerSentEventsTransport.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Stream.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Stream.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Stream.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Subject.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Subject.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Subject.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\TextMessageFormat.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\TextMessageFormat.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\TextMessageFormat.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Utils.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Utils.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\Utils.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\WebSocketTransport.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\WebSocketTransport.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\WebSocketTransport.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\XhrHttpClient.d.ts" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\XhrHttpClient.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\esm\XhrHttpClient.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\webworker\signalr.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\webworker\signalr.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\dist\webworker\signalr.min.js" />
+    <None Remove="wwwroot-save\lib\signalr\dist\webworker\signalr.min.js.map" />
+    <None Remove="wwwroot-save\lib\signalr\README.md" />
+    <None Remove="wwwroot-save\lib\signalr\src\AbortController.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\browser-index.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\DefaultHttpClient.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\DefaultReconnectPolicy.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\EmptyNodeHttpClient.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\Errors.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\HandshakeProtocol.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\HttpClient.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\HttpConnection.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\HubConnection.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\HubConnectionBuilder.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\IConnection.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\IHttpConnectionOptions.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\IHubProtocol.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\ILogger.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\index.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\IReconnectPolicy.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\ITransport.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\JsonHubProtocol.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\Loggers.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\LongPollingTransport.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\NodeHttpClient.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\Polyfills.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\ServerSentEventsTransport.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\Stream.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\Subject.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\TextMessageFormat.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\third-party-notices.txt" />
+    <None Remove="wwwroot-save\lib\signalr\src\Utils.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\WebSocketTransport.ts" />
+    <None Remove="wwwroot-save\lib\signalr\src\XhrHttpClient.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="src\index - Copy.ts" />
+    <TypeScriptCompile Remove="src\index.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot-save\css\site.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\favicon.ico">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\js\chat.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\js\site.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap-grid.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap-grid.css.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap-grid.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap-grid.min.css.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap-reboot.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap-reboot.css.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap-reboot.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap.css.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\css\bootstrap.min.css.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\js\bootstrap.bundle.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\js\bootstrap.bundle.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\js\bootstrap.bundle.min.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\js\bootstrap.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\js\bootstrap.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\js\bootstrap.min.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\dist\js\bootstrap.min.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\bootstrap\LICENSE">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery-validation-unobtrusive\LICENSE.txt">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery-validation\dist\additional-methods.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery-validation\dist\additional-methods.min.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery-validation\dist\jquery.validate.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery-validation\dist\jquery.validate.min.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery-validation\LICENSE.md">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery\dist\jquery.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery\dist\jquery.min.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery\dist\jquery.min.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\jquery\LICENSE.txt">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\browser\signalr.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\browser\signalr.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\browser\signalr.min.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\browser\signalr.min.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\AbortController.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\AbortController.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\browser-index.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\browser-index.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\DefaultHttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\DefaultHttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\DefaultReconnectPolicy.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\DefaultReconnectPolicy.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\EmptyNodeHttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\EmptyNodeHttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Errors.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Errors.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HandshakeProtocol.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HandshakeProtocol.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HttpConnection.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HttpConnection.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HubConnection.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HubConnection.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HubConnectionBuilder.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\HubConnectionBuilder.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\IConnection.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\IConnection.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\IHttpConnectionOptions.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\IHttpConnectionOptions.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\IHubProtocol.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\IHubProtocol.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\ILogger.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\ILogger.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\index.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\index.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\IReconnectPolicy.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\IReconnectPolicy.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\ITransport.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\ITransport.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\JsonHubProtocol.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\JsonHubProtocol.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Loggers.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Loggers.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\LongPollingTransport.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\LongPollingTransport.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\NodeHttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\NodeHttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Polyfills.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Polyfills.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\ServerSentEventsTransport.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\ServerSentEventsTransport.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Stream.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Stream.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Subject.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Subject.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\TextMessageFormat.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\TextMessageFormat.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Utils.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\Utils.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\WebSocketTransport.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\WebSocketTransport.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\XhrHttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\cjs\XhrHttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\AbortController.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\AbortController.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\browser-index.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\browser-index.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\DefaultHttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\DefaultHttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\DefaultReconnectPolicy.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\DefaultReconnectPolicy.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\EmptyNodeHttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\EmptyNodeHttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Errors.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Errors.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HandshakeProtocol.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HandshakeProtocol.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HttpConnection.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HttpConnection.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HubConnection.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HubConnection.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HubConnectionBuilder.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\HubConnectionBuilder.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\IConnection.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\IConnection.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\IHttpConnectionOptions.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\IHttpConnectionOptions.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\IHubProtocol.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\IHubProtocol.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\ILogger.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\ILogger.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\index.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\index.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\IReconnectPolicy.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\IReconnectPolicy.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\ITransport.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\ITransport.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\JsonHubProtocol.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\JsonHubProtocol.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Loggers.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Loggers.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\LongPollingTransport.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\LongPollingTransport.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\NodeHttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\NodeHttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Polyfills.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Polyfills.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\ServerSentEventsTransport.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\ServerSentEventsTransport.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Stream.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Stream.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Subject.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Subject.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\TextMessageFormat.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\TextMessageFormat.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Utils.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\Utils.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\WebSocketTransport.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\WebSocketTransport.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\XhrHttpClient.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\esm\XhrHttpClient.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\webworker\signalr.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\webworker\signalr.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\webworker\signalr.min.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\dist\webworker\signalr.min.js.map">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\README.md">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot-save\lib\signalr\src\third-party-notices.txt">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\signalrChat.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.0-preview6.19307.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0-preview6.19307.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0-preview6.19307.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="3.0.0-preview6.19307.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="3.0.0-preview6.19307.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="3.0.0-preview6.19307.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.0.0-preview6.19304.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0-preview6.19304.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0-preview6.19304.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0-preview6.19304.6" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0-preview6-19319-03" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="wwwroot\lib\signalr\package.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

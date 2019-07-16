@@ -29,14 +29,20 @@ namespace Simple
 				options.CheckConsentNeeded = context => true;
 			});
 
+			services.AddDbContext<InMemoryDbContext>(options =>
+				options.UseInMemoryDatabase(nameof(InMemoryDbContext))
+			);
+
 			services.AddDbContext<ApplicationDbContext>(options =>
 				options.UseSqlServer(
 					Configuration.GetConnectionString("DefaultConnection")));
 			services.AddDefaultIdentity<IdentityUser>()
 				.AddEntityFrameworkStores<ApplicationDbContext>();
 
-			services.AddControllersWithViews();
-			services.AddRazorPages();
+			services.AddControllersWithViews().AddRazorRuntimeCompilation();
+			services.AddRazorPages().AddRazorRuntimeCompilation();
+
+			services.AddTransient<IEmployeeRepository, EmployeeRepository>();
 
 			//services.AddAuthentication(options =>
 			//{
@@ -202,7 +208,8 @@ namespace Simple
 			}
 
 			app.UseHttpsRedirection();
-			app.UseDefaultFiles();
+
+			//app.UseDefaultFiles();
 			app.UseStaticFiles();
 
 			app.UseCookiePolicy();
@@ -323,10 +330,13 @@ namespace Simple
 				endpoints.MapControllerRoute(
 					name: "default",
 					pattern: "{controller=Home}/{action=Index}/{id?}");
+
 				endpoints.MapRazorPages();
 
+				endpoints.MapHub<LiveDataHub>("/liveDataHub");
+				endpoints.MapHub<SignalServer>("/signalServer");
 				//endpoints.MapHub<ChatHub>("/chatHub");
-				endpoints.MapHub<ChatHub>("/hub");
+				//endpoints.MapHub<ChatHub>("/hub");
 				//endpoints.MapHub<ChatHub>("/hubs/clock");
 			});
 		}
